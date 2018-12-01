@@ -5,7 +5,7 @@ import time
 
 def blink_light(pin_code,rank=5,turn_cnt=1,interval=0.02):
 
-    count = 100/5
+    count = 100/rank
     GPIO.setup(pin_code, GPIO.OUT)
     pwm = GPIO.PWM(pin_code, 70)
     pwm.start(0)
